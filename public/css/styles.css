@@ -1,0 +1,838 @@
+@import url('colores.css');
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+.contenido {
+    overflow:hidden;
+}
+
+#loadPage {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#loadPage div {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    color: #0097D7;
+}
+/* ESTILOS DE BARRA DE NAVEGACION (NAVBAR)*/
+.navFont {
+    color: var(--main-word-color);
+    font-size: 16px;
+}
+
+.buttonFirst {
+    background-color: var(--first-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+.buttonSecond {
+    background-color: var(--second-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+.buttonSecond:hover {
+    background-color: var(--first-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+.buttonDetalles {
+    background-color: var(--first-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+.buttonDetalles:hover {
+    background-color: var(--second-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+.buttonEditar {
+    background-color: var(--third-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+.buttonEditar:hover {
+    background-color: var(--second-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+}
+
+nav {
+    position: relative;
+    z-index: 100;
+}
+
+/*ESTILOS DE PIE DE PAGINA (FOOTER)*/
+footer{
+    background-color: var(--main-word-color);
+    color: white;
+}
+
+footer ul li a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer ul li a:hover{
+    color: var(--second-color);
+}
+
+/*ESTILOS DE CUERPO (BODY)*/
+#presentacionMain {
+    padding-top: 120px;
+    position: relative;
+    z-index: 10;
+}
+
+h2{
+    font-size: 72px;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+    padding-bottom: 32px;
+}
+
+p{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+#membresia h3 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    padding-bottom: 0px;
+    margin: 0;
+    position: relative;
+}
+
+#membresia p {
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+    margin: 0;
+    padding: 6px 0px 30px 0px;
+    position: relative;
+}
+
+.btn-first{
+    background-color: var(--first-color);
+    color: white;
+    font-size: 16px;
+    padding: 12px 32px;
+    position: relative;
+}
+.btn-first:hover{
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+}
+
+.btn-second{
+    background-color: var(--second-color);
+    color: white;
+    font-size: 16px;
+    padding: 12px 32px;
+    position: relative;
+}
+.btn-second:hover{
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+}
+
+.contenedor {
+    margin: 0; 
+    padding: 0; 
+    padding-top: 70px; 
+    position: relative;
+}
+/*.contenedor:hover {-webkit-transform:scale(1.05);transform:scale(1.05);}*/
+
+
+#portada{
+    transform: rotate(-6deg);
+    border-radius: 8px;
+    box-shadow: inset;
+    position: relative;
+    z-index: 10;
+}
+
+.relative{
+    position: relative;
+}
+
+.pb-100{
+    padding-bottom: 100px;
+}
+.pb-50{
+    padding-bottom: 50px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.fondo {
+    background-image: url("/images/fotografias/fotoDivertida.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+}
+  .fondo:before{
+    content: '';
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fondoActividades {
+    background-image: url("/images/fotografias/navidad20212.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+}
+
+.fondoActividades:before{
+    content: '';
+    position:absolute;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.color-white{
+    color: white;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    padding-bottom: 32px;
+    margin: 0;
+    position: relative;
+}
+
+.datos{
+    background-color: var(--second-color);
+    height: 300px;
+}
+
+.hexagon{
+    background-image: url("/images/logos/hexagono.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hexagonos {
+    margin-top: -70px;
+}
+
+.counter{
+    padding-top: 5px !important;
+    padding-bottom: 0;
+}
+
+h4{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    padding: 100px 0px;
+}
+h4 p {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0;
+}
+
+h5{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    padding-bottom: 32px;
+}
+
+h6{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.area{
+    background-color: var(--third-color);
+    border-radius: 8px;
+    border: 5px solid;
+    border-color: white;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.area p {
+    font-size: 16px;
+}
+
+.nuestros{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--second-color);
+}
+
+.cel{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: var(--second-color);
+}
+
+.jdl{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: var(--first-color);
+}
+
+.ag{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: var(--main-word-color);
+}
+
+.top-120{
+    padding-top: 120px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-50{
+    padding-top: 50px;
+}
+
+.pt-100{
+    padding-top: 100px;
+}
+.circuloLogo{
+    width: 350px;
+    height: 350px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--first-color);
+    margin:0px auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--second-color);
+    position: relative;
+    z-index: 10;
+}
+
+.circulo{
+    width: 1200px;
+    height: 600px;
+    -moz-border-radius: 1200px 1200px 0 0;
+    -webkit-border-radius: 1200px 1200px 0 0;
+    border-radius: 1200px 1200px 0 0;
+    background: var(--third-color);
+    margin:0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 200px;
+    z-index: -1;
+}
+
+#nosotros {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+    z-index: 10;
+    
+}
+
+#queEs{
+    position:relative;
+    background-color: var(--third-color);
+    border-radius: 8px;
+    padding: 60px;
+    margin-top: -300px;
+    z-index: 15;
+    margin-bottom: 32px;
+}
+
+#datos {
+    padding-top: 60px;
+}
+
+@media (max-width:1200px){
+    #tituloActividad{
+        padding-top: 20px;
+    }
+}
+
+@media (max-width:780px){
+    #presentacion{
+        padding-top: 0px;
+    }
+    .figuraGrande {
+        width: 400px;
+        height: 400px;
+    }
+    #porque{
+        padding-top: 30px;
+    }
+    #datos {
+        padding-top: 0px;
+    }
+    #queEs{
+        margin-top: 0px;
+    }
+}
+
+#mision{
+    background-color: var(--first-color);
+    border-radius: 8px;
+    color: white;
+    margin: 32px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.mision p{
+    padding-bottom: 0;
+}
+
+.mision {
+    padding: 50px 100px;
+}
+
+#vision{
+    background-color: var(--second-color);
+    border-radius: 8px;
+    color: white;
+    margin: 32px 0;
+    position: relative;
+    z-index: 10;
+}
+#valores{
+    background-color: var(--third-color);
+    border-radius: 8px;
+    color: var(--main-word-color);
+    margin: 32px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.valores p{
+    padding-bottom: 0;
+}
+
+.valores {
+    padding: 20px 60px;
+}
+
+.analizar{
+    background: #EDBE38;
+}
+.revisar{
+    background: #3A67B1;
+}
+.desarrollar{
+    background: #56BDA3;
+}
+.ejecutar{
+    background: #0097D7;
+}
+
+.marcoIconos{
+    margin: 0 auto;
+    padding: 28px 0px
+}
+
+#marco{
+    position: relative;
+    z-index: 10;
+}
+
+.redes{
+    padding: 0;
+    margin: 0;
+}
+
+.redes li {
+    display: inline-block;
+    padding: 0px 5px;
+  }
+
+  .redondearImg{
+    border-radius: 8px;
+  }
+
+  #etiqueta{
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--third-color);
+    margin-top: -50px;
+  }
+
+  .centro{
+    margin: 0 auto;
+  }
+
+.miembroBack{
+    background-color: var(--first-color);
+}
+
+.miembroFoto{
+    margin: 60px auto;
+}
+
+.miembroPresentacion{
+    background-color: var(--second-color);
+}
+
+.miembroTitulo{
+    color: var(--main-word-color);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.curriculum{
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+.curriculum:hover{
+    color: var(--second-color);
+}
+
+.miembro-p{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+.proyecto-p{
+    color: grey;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 28px;
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+.colorFirst{
+    color: var(--first-color);
+}
+
+.miembroContenido{
+    background-color: white; 
+    width:90%; 
+    margin:10% auto; 
+    border-radius:8px; 
+    margin-left:-80px
+}
+.padding50{
+    padding: 50px;
+}
+
+.miembroDato{
+    border-style: solid;
+    border-color: var(--first-color);
+    border-width: 4px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 0px 20px;
+}
+
+#portadaActividad {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+}
+#portadaActividad:before{
+    content: '';
+    position:absolute;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 1));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#datosActividad{
+    position: relative;
+    z-index: 10;
+}
+
+#datosActividad p {
+    font-size: 18px;
+    font-style: normal;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+.escalar img{
+    transition: all 300ms;
+    position: relative;
+}
+
+.escalar img:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+.escalar2{
+    transition: all 300ms;
+    position: relative;
+}
+
+.escalar2:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.buscar{
+    background-color: var(--first-color);
+    color: white;
+}
+
+.buscar:hover{
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    color: white;
+}
+
+.limpiar{
+    background-color: var(--third-color);
+}
+
+.limpiar:hover{
+    background-color: var(--main-word-color);
+    color: white;
+}
+
+@media (max-width:768px){
+    .miembroContenido{
+        margin-left: auto;
+    }
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.enlace:hover {
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+.login {
+    background-color: var(--third-color);
+    height: 100vh;
+    background-size: cover;
+    z-index: 0;
+}
+
+.btn-login{
+    margin-top: 15px;
+    background-color: var(--second-color);
+    color: white;
+    font-size: 16px;
+    /*padding: 12px 32px;*/
+    padding: .375rem .75rem;
+    position: relative;
+}
+.btn-login:hover{
+    background-color: var(--main-word-color);
+    border-color: var(--third-color);
+    color: white;
+}
+
+.btn-login2{
+    margin-top: 15px;
+    background-color: var(--first-color);
+    color: white;
+    font-size: 16px;
+    /*padding: 12px 32px;*/
+    padding: .375rem .75rem;
+    position: relative;
+}
+.btn-login2:hover{
+    background-color: var(--main-word-color);
+    border-color: var(--third-color);
+    color: white;
+}
+
+#bienvenido{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 32px;
+    margin: 0;
+    /*padding-bottom: 32px;*/
+    position: relative;
+}
+
+.buttonNombre{
+    background-color: none;
+    color: var(--main-word-color);
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 7px;
+    text-decoration: none;
+}
+
+.buttonNombre:hover{
+    background-color: none;
+    color: var(--main-word-color);
+    border: none;
+}
+
+.btn-rol-usuario{
+    background-color: #EDBE38;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    position: relative;
+}
+.btn-rol-editor{
+    background-color: #56BDA3;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    position: relative;
+}
+.btn-rol-administrador{
+    background-color: #0097D7;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    position: relative;
+}
+.btn-rol-inactivo{
+    background-color: #3A67B1;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    position: relative;
+}
+.btn-rol-update{
+    background-color: white;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    position: relative;
+}
+
+.fondo-postulacion{
+    background-color: var(--first-color);
+}
+
+.circulopost{
+    width: 450px;
+    height: 450px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--second-color);
+    margin:0px auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--second-color);
+    position: relative;
+    z-index: 10;
+}
+
+#postulacion h3 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 32px;
+    padding-bottom: 32px;
+    margin: 0;
+    position: relative;
+    color: white;
+}
+
+#postulacion p{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 32px;
+    position: relative;
+    color: white;
+}
+
+#contactanos{
+    color: var(--main-word-color);
+}
+
+.contactanos{
+    border: solid;
+    border-radius: 8px;
+    border-color: var(--third-color);
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.justificado{
+    text-align: justify;
+}
