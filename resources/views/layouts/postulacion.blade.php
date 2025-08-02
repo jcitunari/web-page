@@ -14,18 +14,17 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <div class="row justify-content-center align-items-center p-5" id="postulacion">
-                <div class="col-md-12 ptb-40" id="">
+            <div class="row justify-content-center align-items-center p-3" id="postulacion">
+                <div class="col-md-12 ptb-40" id="" style="border: 5px solid #f97303; border-radius: 25px;">
                     <h2 class="text-center">
-
-                        Escuela De Líderes <strong style="color: orange">EDL-JCI TUNARI</strong>
+                        Escuela De Líderes
                     </h2>
-                    <!--<div class="figura figuraPequena colorSecond medio"></div>-->
+                    <h2 class="text-center" style="color: #d34206; font-weight: bold">
+                        EDL-JCI TUNARI
+                    </h2>
                 </div>
                 <div class="col-md-7 justificado">
                     <p id="parrafoPost"><span style="color: #212529">
-                            Escuela de Líderes
-                            <br>
                             La EDL es más que una introducción a JCI: es una experiencia única que busca inspirar,
                             empoderar y preparar a los nuevos miembros para que sean verdaderos líderes con propósito y
                             acción.
@@ -38,106 +37,78 @@
                     </p>
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ url('/') }}/images/postulacion/leader.svg" alt="postulacion" width="100%">
+                    <img src="{{ url('/') }}/images/postulacion/hero-postulacion.webp" alt="postulacion" width="100%">
                 </div>
 
                 <div class="grid ptb-40">
                     <div class="p-3 box1">
                         <h3>FASE I: Registro de postulantes</h3>
                         <div style="text-align: center">
-                            <img src="{{ url('/') }}/images/postulacion/form.svg" alt="form" width="80%">
+                            <img class="image-card" src="{{ url('/') }}/images/postulacion/convocatoria.webp"
+                                 alt="convocatoria"
+                                 width="100%">
                         </div>
-                        <ul style="list-style-type:lower-alpha">
-                            <li>Convocatoria abierta</li>
-                            <ul>
-                                <li>Fecha: 14 al 27 de Agosto.</li>
-                            </ul>
-                            <li>
-                                Llenado del Formulario para nuevos postulantes
-                                <a style="color: var(--second-color)"
-                                   href="https://docs.google.com/forms/d/e/1FAIpQLSeSzn_bW28x035hZgW3T2V_IP6McYptGIbxOqtI60WH3yiL9A/viewform?usp=sf_link "
-                                   target="_blank">aquí</a>
-                            </li>
-                        </ul>
+                        <p>📢 Convocatoria Abierta</p>
+                        <p><strong>Fecha:</strong> 28 de Julio al 09 de Agosto</p>
+                        <p>¡Te estamos buscando! Si quieres formar parte de nuestro equipo, esta es tu oportunidad.</p>
+                        <a href="https://forms.gle/ksaNe8iR53Af7Q887"
+                           target="_blank"
+                           id="submit" class="btn buttonSecond" onclick="executeProcess()"
+                           style="width: 97%; transform: translateY(0%); margin-top: 14%;">
+                            Abrir formulario ✍️
+                        </a>
                     </div>
                     <div class="p-3 box2">
-                        <h3>FASE II: Inducción a JCI Tunari</h3>
+                        <h3>FASE II: Entrevista</h3>
                         <div style="text-align: center">
-                            <img src="{{ url('/') }}/images/postulacion/profile.svg" alt="profile" width="80%">
+                            <img class="image-card" src="{{ url('/') }}/images/postulacion/entrevista.webp"
+                                 alt="profile" width="100%">
                         </div>
-                        <ul style="list-style-type:lower-alpha">
-                            <li>20ma Asamblea Ordinaria: “Presentación de Postulantes”.</li>
-                            <ul>
-                                <li>Fecha: Miércoles 30 de Agosto.</li>
-                                <li>Hora: 19:00 horas.</li>
-                            </ul>
-                            <li>Actividad de Confraternización.</li>
-                            <ul>
-                                <li>Fecha: Sábado 2 de Septiembre.</li>
-                                <li>Hora: 16:00 horas.</li>
-                            </ul>
-                            <li>Primera Capacitación: “Inducción a JCI Tunari”.</li>
-                            <ul>
-                                <li>Fecha: Sábado 9 de Septiembre.</li>
-                                <li>Hora: 16:00 horas.</li>
-                            </ul>
-                        </ul>
+                        <p>🎤 ¿Quieres unirte?</p>
+                        <p>
+                            ¡Genial! Para ser parte de nuestra comunidad, realizaremos una entrevista corta donde
+                            podremos conocerte mejor, contarte cómo funcionamos y resolver tus dudas.
+                        </p>
+                        <p>¡Anímate a dar el primer paso!</p>
                     </div>
                     <div class="p-3 box3">
-                        <h3>FASE III: Fundamentos Básicos y Formación.</h3>
+                        <h3>FASE III: Plataformas</h3>
                         <div style="text-align: center">
-                            <img class="imgFase3" src="{{ url('/') }}/images/postulacion/learning.svg" alt="learning">
+                            <img class="image-card" src="{{ url('/') }}/images/postulacion/plataformas.webp"
+                                 alt="plataformas" width="100%">
                         </div>
-                        <ul style="list-style-type:lower-alpha">
-                            <li>Taller Emprendimiento.</li>
-                            <ul>
-                                <li>Fecha: Sábado 16 de Septiembre.</li>
-                                <li>Hora: 16:00 horas.</li>
-                                <li>Lugar: Por confirmar.</li>
-                            </ul>
-                            <li>Actividad de Confraternización.</li>
-                            <ul>
-                                <li>Fecha: Viernes 23 o Domingo 24 de Septiembre.</li>
-                                <li>Lugar: Por confirmar.</li>
-                            </ul>
-                            <li>Entrevistas Personales.</li>
-                            <ul>
-                                <li>Fecha: Lunes 25 de Septiembre.</li>
-                                <li>Hora: 18:00 horas.</li>
-                                <li>Lugar: Por confirmar.</li>
-                            </ul>
-                        </ul>
+                        <p>💻 Capacitación con plataformas online
+                        <p>
+                            Durante tu proceso de formación, usaremos plataformas digitales para que accedas a
+                            materiales, actividades y sesiones interactivas.
+                        </p>
+                        <p>¡Todo pensado para que aprendas a tu ritmo y desde donde estés!</p>
                     </div>
                     <div class="p-3 box1">
-                        <h3>FASE IV: Integración y Afiliación.</h3>
+                        <h3>FASE IV: Asignación</h3>
                         <div style="text-align: center">
-                            <img src="{{ url('/') }}/images/postulacion/group.svg" alt="group" width="80%">
+                            <img class="image-card" src="{{ url('/') }}/images/postulacion/asignacion.webp"
+                                 alt="asignacion" width="100%">
                         </div>
-                        <ul style="list-style-type:lower-alpha">
-                            <li>22da Asamblea Ordinaria: “Afiliación de nuevos Miembros”</li>
-                            <ul>
-                                <li>Fecha: Miércoles 27 de Septiembre.</li>
-                                <li>Hora: 19:00 horas.</li>
-                            </ul>
-                            <li>Asignación de Padrinos.</li>
-                        </ul>
+                        <p>🤝 Acompañamiento en equipo</p>
+                        <p>
+                            No estarás solo en este camino. Te asignaremos un equipo que te acompañará en tu desarrollo,
+                            resolverá tus dudas y te apoyará en cada paso.</p>
+                        <p>¡Crecemos juntos!</p>
                     </div>
                     <div class="p-3 box2">
-                        <h3>FASE V: Juramento</h3>
+                        <h3>FASE V: Capacitaciones</h3>
                         <div style="text-align: center">
-                            <img src="{{ url('/') }}/images/postulacion/superwoman.svg" alt="superwoman" width="80%">
+                            <img class="image-card" src="{{ url('/') }}/images/postulacion/capacitaciones.webp"
+                                 alt="capacitaciones" width="100%">
                         </div>
-                        <ul style="list-style-type:lower-alpha">
-                            <li>Juramento de Nuevos Miembros (Convención Nacional)</li>
-                            <ul>
-                                <li>Fecha: Sábado 7 de Octubre.</li>
-                            </ul>
-                            <li>Juramento de Nuevos Miembros (Asamblea)</li>
-                            <ul>
-                                <li>Fecha: Miércoles 11 de Octubre.</li>
-                                <li>Hora: 19:00 horas.</li>
-                            </ul>
-                        </ul>
+                        <p>🎓 Capacitaciones JCI Tunari</p>
+                        <p>
+                            Como parte de tu proceso, recibirás capacitaciones organizadas por JCI Tunari. Estas te
+                            ayudarán a conocer mejor nuestra organización, desarrollar habilidades y prepararte para
+                            asumir nuevos retos.
+                        </p>
+                        <p>¡Aprender y crecer juntos es parte del viaje!</p>
                     </div>
                 </div>
 
@@ -156,9 +127,16 @@
                 <div class="col-md-5 pt-100">
                     <h3>Contáctanos</h3>
                     <p>
+                        Contactanos por Whatsapp:
+                        <a style="color: var(--second-color)"
+                           href="https://api.whatsapp.com/send?phone=+59179390921&text=Buenas%20quisiera%20saber%20mas%20informaci%C3%B3n%20sobre%20la%20Escuela%20De%20L%C3%ADderes%20EDL-JCI%20TUNARI...."
+                           target="_blank">WhatsApp link</a>
+                    </p>
+                    <p>o</p>
+                    <p>
                         Puedes enviarnos un correo electronico mediante el siguiente formulario, no olvides introducir
                         todos tus datos y las preguntas que tengas sobre tu postulación. Nosotros te responderemos lo
-                        mas pronto posible.
+                        más pronto posible.
                     </p>
                 </div>
                 <div class="col-md-7">

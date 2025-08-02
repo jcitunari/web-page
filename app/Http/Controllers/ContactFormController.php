@@ -13,7 +13,7 @@ class ContactFormController extends Controller
         return view('layouts.postulacion');
         //return view('contact.form');
     }
-    
+
     public function send(Request $request)
     {
         $data = $request->validate([
@@ -23,9 +23,9 @@ class ContactFormController extends Controller
             'subject' => 'required',
             'message' => 'required'
         ]);
-    
-        Mail::to('paularoc97@gmail.com')->send(new ContactForm($data));
-    
+
+        Mail::to('jci.wendy.22@gmail.com')->send(new ContactForm($data));
+
         return back()->with('data', $data)->with('success', 'Mensaje enviado correctamente');
     }
 }
