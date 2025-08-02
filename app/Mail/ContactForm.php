@@ -28,7 +28,7 @@ class ContactForm extends Mailable
      */
     public function build()
     {
-        return $this->from('ronaldoquispe@jcitunari.com', 'JCI Tunari')->subject('POSTULACION A JCI TUNARI')->view('layouts.contact-form', ['data' => $this->data]);
+        return $this->from('carlos.rojas@jcitunari.com', 'JCI Tunari')->subject('POSTULACION A JCI TUNARI')->view('layouts.contact-form', ['data' => $this->data]);
         //return $this->from('postulacion@gmail.com', 'Automated System for Sending Notifications')->subject('A user send you a new message')->view('layouts.contact-form', ['data' => $this->data]);
         //return $this->view('view.name');
     }
