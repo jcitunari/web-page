@@ -49,7 +49,7 @@
                                  width="100%">
                         </div>
                         <p>📢 Convocatoria Abierta</p>
-                        <p><strong>Fecha:</strong> 28 de Julio al 09 de Agosto</p>
+                        <p><strong>Fecha:</strong> 28 de Julio y durante Agosto</p>
                         <p>¡Te estamos buscando! Si quieres formar parte de nuestro equipo, esta es tu oportunidad.</p>
                         <a href="https://forms.gle/ksaNe8iR53Af7Q887"
                            target="_blank"
