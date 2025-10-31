@@ -26,7 +26,7 @@ class MiembroController extends Controller
 
         //$miembros = Asignar_cargo::select('user_id', 'cargo_id')->where('gestion_id', 4)->get();
         //$miembros = User::select('id','nombre', 'apPaterno', 'apMaterno')->get();
-        
+
         return view('miembros.index', compact('miembros','gestiones','anio'));
     }
 
@@ -49,6 +49,7 @@ class MiembroController extends Controller
             'celular' => 'required|digits:8',
             'profesion' => 'required|max:60',
             'intereses' => 'required|max:200',
+            'puntosAMejorar' => 'required|max:200',
             'fechaJuramento' => 'required',
             'cargo' => 'required',
             'gestion' => 'required',
@@ -91,7 +92,7 @@ class MiembroController extends Controller
         $asignacion = new Asignar_cargo();
         $asignacion->user_id = $creado->id;
         $asignacion->gestion_id = $request->gestion;
-        
+
         if ($request->cargo == 16 || $request->cargo == 15){
             $asignacion->cargo_id= $request->cargo;
             $asignacion->save();
@@ -133,7 +134,10 @@ class MiembroController extends Controller
         $gestiones = Gestion::select('id', 'anio')->orderBy('id','DESC')->get();
         $ultimoCargo = Asignar_cargo::where('user_id', $miembro->id)->orderBy('gestion_id','DESC')->first();
         //return (['miembro' => $miembro, 'cargos' => $cargos, 'gestiones' => $gestiones, 'ultimoCargo' => $ultimoCargo ]);
-        return view('miembros.edit', ['miembro' => $miembro, 'cargos' => $cargos, 'gestiones' => $gestiones, 'ultimoCargo' => $ultimoCargo ] );
+        return view(
+            'miembros.edit',
+            ['miembro' => $miembro, 'cargos' => $cargos, 'gestiones' => $gestiones, 'ultimoCargo' => $ultimoCargo]
+        );
     }
 
     public function update (Request $request, User $miembro, Asignar_cargo $ultimoCargo)
@@ -143,6 +147,7 @@ class MiembroController extends Controller
             'celular' => 'required|digits:8',
             'profesion' => 'required|max:60',
             'intereses' => 'required|max:200',
+            'puntosAMejorar' => 'required|max:200',
             'cargo' => 'required',
             'gestion' => 'required',
             'presentacion' => 'required',
@@ -184,7 +189,7 @@ class MiembroController extends Controller
             $asignacion = new Asignar_cargo();
             $asignacion->user_id = $miembro->id;
             $asignacion->gestion_id = $request->gestion;
-        
+
             if ($request->cargo == 16 || $request->cargo == 15){
                 $asignacion->cargo_id= $request->cargo;
                 $asignacion->save();

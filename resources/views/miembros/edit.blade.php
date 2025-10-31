@@ -44,7 +44,7 @@
                     <div class="col-md-3">
                         <label for="ci" class="form-label">Cédula de Identidad</label>
                         <input type="text" class="form-control shadow-none" id="ci" name="ci" value="{{ $miembro->ci }}"
-                               >
+                        >
                         @error('ci')
                         <small class="text-danger" role="alert">
                             {{ $message }}
@@ -54,7 +54,7 @@
                     <div class="col-md-3">
                         <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
                         <input type="date" class="form-control shadow-none" id="fechaNacimiento" name="fechaNacimiento"
-                               value="{{ $miembro->fechaNacimiento }}" >
+                               value="{{ $miembro->fechaNacimiento }}">
                         @error('fechaNacimiento')
                         <small class="text-danger" role="alert">
                             {{ $message }}
@@ -81,7 +81,7 @@
                         </small>
                         @enderror
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label for="profesion" class="form-label">Profesión</label>
                         <input type="text" class="form-control shadow-none" id="profesion" name="profesion"
                                value="{{ $miembro->profesion }}">
@@ -91,16 +91,28 @@
                         </small>
                         @enderror
                     </div>
+
                     <div class="col-md-6">
                         <label for="intereses" class="form-label">Habilidades</label>
-                        <input type="text" class="form-control shadow-none" id="intereses" name="intereses"
-                               value="{{ $miembro->intereses }}">
+                        <textarea class="form-control shadow-none" id="intereses"
+                                  name="intereses">{{ $miembro->intereses }}</textarea>
                         @error('intereses')
                         <small class="text-danger" role="alert">
                             {{ $message }}
                         </small>
                         @enderror
                     </div>
+                    <div class="col-md-6">
+                        <label for="puntosAMejorar" class="form-label">Puntos a mejorar</label>
+                        <textarea class="form-control shadow-none" id="puntosAMejorar" name="puntosAMejorar"
+                        >{{ $miembro->puntosAMejorar }}</textarea>
+                        @error('puntosAMejorar')
+                        <small class="text-danger" role="alert">
+                            {{ $message }}
+                        </small>
+                        @enderror
+                    </div>
+
                     <div class="col-md-4">
                         <label for="fechaJuramento" class="form-label">Fecha de Juramento</label>
                         <input type="date" class="form-control shadow-none" id="fechaJuramento" name="fechaJuramento"

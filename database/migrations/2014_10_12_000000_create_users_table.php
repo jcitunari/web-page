@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('profesion', 60);
             $table->text('presentacion');
             $table->string('intereses', 200);
+            $table->string('puntosAMejorar', 200);
             $table->string('foto');//->nullable();
             $table->string('curriculum')->nullable();
             $table->string('celular', 16)->unique();

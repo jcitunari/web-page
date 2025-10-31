@@ -51,12 +51,16 @@
                 <p class="miembroTitulo">{{ count($proyectos) }}</p>
             </div>
             <!--                -->
-            <div class="col-lg-9 col-md-12 col-sm-12 miembroDato mb-3">
+            @if(auth()->check())
+                @if(auth()->user()->rol != 'INACTIVO' || auth()->user()->id == $miembro->id)
+            <div class="col-lg-6 col-md-12 col-sm-12 miembroDato mb-3">
                 <p class="miembro-p">Habilidades</p>
                 <p class="miembroTitulo">{{ $miembro->intereses }}</p>
             </div>
-            @if(auth()->check())
-                @if(auth()->user()->rol != 'INACTIVO' || auth()->user()->id == $miembro->id)
+                <div class="col-lg-6 col-md-12 col-sm-12 miembroDato mb-3">
+                <p class="miembro-p">Puntos a mejorar</p>
+                <p class="miembroTitulo">{{ $miembro->puntosAMejorar }}</p>
+            </div>
             <div class="col-lg-3 col-md-6 col-sm-6 miembroDato mb-3">
                 <p class="miembro-p">Ver</p>
                 <a class="miembroTitulo curriculum" href="{{ $miembro->curriculum }}" target="_blank">Curriculum</a>
@@ -131,5 +135,5 @@
         </div>
     </div>
     <!--<h3 class="text-center top-120">Redes sociales de {{ $miembro->nombre }} {{ $miembro->apPaterno }}</h3>-->
-</div> 
+</div>
 @endsection
