@@ -32,6 +32,7 @@ class User extends Authenticatable
         'profesion',
         'presentacion',
         'intereses',
+        'puntosAMejorar',
         'foto',
         'curriculum',
         'celular',
@@ -104,5 +105,5 @@ class User extends Authenticatable
             set: fn($value) => strtolower($value)
         );
     }*/
-    
+
 }
