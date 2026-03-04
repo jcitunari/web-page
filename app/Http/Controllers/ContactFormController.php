@@ -24,7 +24,7 @@ class ContactFormController extends Controller
             'message' => 'required'
         ]);
 
-        Mail::to('jci.wendy.22@gmail.com')->send(new ContactForm($data));
+        Mail::to('carlos.rojas@jcitunari.com')->send(new ContactForm($data));
 
         return back()->with('data', $data)->with('success', 'Mensaje enviado correctamente');
     }

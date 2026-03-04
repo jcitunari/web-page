@@ -49,9 +49,9 @@
                                  width="100%">
                         </div>
                         <p>📢 Convocatoria Abierta</p>
-                        <p><strong>Fecha:</strong> 28 de Julio y durante Agosto</p>
+                        <p><strong>Fecha:</strong> 11 de Febrero al 09 de marzo</p>
                         <p>¡Te estamos buscando! Si quieres formar parte de nuestro equipo, esta es tu oportunidad.</p>
-                        <a href="https://forms.gle/ksaNe8iR53Af7Q887"
+                        <a href="https://forms.gle/wGTmD5kvkLzUpGBj6"
                            target="_blank"
                            id="submit" class="btn buttonSecond" onclick="executeProcess()"
                            style="width: 97%; transform: translateY(0%); margin-top: 14%;">
@@ -129,7 +129,7 @@
                     <p>
                         Contactanos por Whatsapp:
                         <a style="color: var(--second-color)"
-                           href="https://api.whatsapp.com/send?phone=+59179390921&text=Buenas%20quisiera%20saber%20mas%20informaci%C3%B3n%20sobre%20la%20Escuela%20De%20L%C3%ADderes%20EDL-JCI%20TUNARI...."
+                           href="https://api.whatsapp.com/send?phone=+59162439594&text=Buenas%20quisiera%20saber%20mas%20informaci%C3%B3n%20sobre%20la%20Escuela%20De%20L%C3%ADderes%20EDL-JCI%20TUNARI...."
                            target="_blank">WhatsApp link</a>
                     </p>
                     <p>o</p>
@@ -162,8 +162,8 @@
                                       placeholder="Mensaje"></textarea>
                         </div>
                         <div class="col-md-12 col-12 d-grid gap-2 pt-10 pb-20">
-                            <button type="submit" id="submit" class="btn btn-second" onclick="executeProcess()">Enviar
-                                tu mensaje
+                            <button type="submit" id="submit" class="btn btn-second" onclick="executeProcess()">
+                                Enviar tu mensaje
                             </button>
                         </div>
                     </form>
